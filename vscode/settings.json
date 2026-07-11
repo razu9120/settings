@@ -1,0 +1,77 @@
+{
+  // ファイル保存時に自動でフォーマットする
+  "editor.formatOnSave": true,
+  // マークダウンは保存時の自動フォーマットを無効化する
+  "[markdown]": {
+    "editor.formatOnSave": false,
+  },
+  // ファイル名パターンと言語モードの対応付け (.env 系を dotenv として扱う)
+  "files.associations": {
+    ".env*": "dotenv",
+  },
+  // トークン (構文要素) ごとの表示色をカスタマイズする
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        // .env のキー名を透明色にして隠す (値のみ見せる想定)
+        "scope": "keyword.other.dotenv",
+        "settings": {
+          "foreground": "#FF000000",
+        },
+      },
+    ],
+  },
+  // エディタ右側のミニマップを非表示にする
+  "editor.minimap.enabled": false,
+  // リモート環境でのポート自動転送の検出方法 (hybrid = プロセス + 出力の両方)
+  "remote.autoForwardPortsSource": "hybrid",
+  // インレイヒント (型・引数名などのインライン表示) を無効化する
+  "editor.inlayHints.enabled": "off",
+  // ワークベンチ (UI 全体) の配色を個別に上書きする
+  "workbench.colorCustomizations": {
+    // 現在行の背景色
+    // "editor.lineHighlightBackground": "#1073cf2d",
+    "editor.lineHighlightBackground": "#FF66002d",
+    // 選択範囲の背景色
+    "editor.selectionBackground": "#FF66002d",
+    // アクティブなタブの下部ボーダー色
+    // "tab.activeBorder": "#3794ff",
+    "tab.activeBorder": "#FF6600",
+  },
+  // エディタの折り返しを無効化する
+  "editor.wordWrap": "off",
+  // 差分エディタの折り返しを無効化する
+  "diffEditor.wordWrap": "off",
+  // インデントのガイド線を非表示にする
+  "editor.guides.indentation": false,
+  // 対応する括弧のガイド線を非表示にする
+  "editor.guides.bracketPairs": false,
+  // 配色テーマ
+  "workbench.colorTheme": "Dracula Theme Soft",
+  // 統合ターミナルのマウスホイールのスクロール速度
+  "terminal.integrated.mouseWheelScrollSensitivity": 2,
+  // チャットなどの AI 機能を無効化する
+  "chat.disableAIFeatures": true,
+  // タイトルバーをエディタと一体化させ、ウィンドウ上部をスッキリさせる
+  "window.titleBarStyle": "custom",
+  // カーソルの点滅を滑らかにする
+  // "editor.cursorBlinking": "smooth",
+  // カーソル移動をアニメーション化する
+  // "editor.cursorSmoothCaretAnimation": "on",
+  // エディタのスクロールを滑らかにする
+  "editor.smoothScrolling": true,
+  // リスト (エクスプローラ等) のスクロールを滑らかにする
+  "workbench.list.smoothScrolling": true,
+  // 空白文字を行頭・行末など境界のみ表示する
+  "editor.renderWhitespace": "boundary",
+  // 上部中央にコマンドセンター (検索バー) を表示する
+  "window.commandCenter": true,
+  // 未保存の変更があるタブを色付きで強調する
+  "workbench.editor.highlightModifiedTabs": true,
+  // タブに Git 状態などのバッジを表示する
+  "workbench.editor.decorations.badges": true,
+  // タブの文字色を Git 状態などで色付けする
+  "workbench.editor.decorations.colors": true,
+  // アクティビティバーを上部に移動し、左の縦バーを無くしてエディタを広くする
+  "workbench.activityBar.location": "top",
+}
